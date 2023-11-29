@@ -54,10 +54,10 @@ h2{font-family:'Ubuntu', sans-serif; font-size:2.2em; line-height:2em; color:#ff
 }
 #topblock{height:4em; width:100%;}
 
-.menu{max-width:350px; margin:0 auto 0 auto;}
+.menu{max-width:390px; margin:0 auto 0 auto;}
 @media (min-width: 768px)
 {
-   .menu{max-width:695px; margin:0 auto 0 auto;}
+   .menu{max-width:800x; margin:0 auto 0 auto;}
 }
 h3{font-family:'Ubuntu', sans-serif; font-size:1.7em; line-height:1.9em; color:#fff; margin:0 0 0 40px;}
 h2 a{color:var(--black);}
@@ -218,7 +218,7 @@ white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
 transition: background-color .3s;
-width:160px;
+width:180px;
 margin:5px;
 border:1px #ffffff solid;
 }
