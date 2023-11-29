@@ -200,7 +200,7 @@ margin:30px auto 50px auto; border-radius: 30px 30px 30px 30px;}
 /*-Table*/
 .price{width:80px;padding: 0 0 0 25px;}
 .tdred{color:#f26366; border-bottom: #ffffff 2px dotted; padding:5px 0 10px 0;}
-.tdservice{padding:10px 0 0 0;}
+.tdservice{padding:10px 0 0 0; border-bottom: #ffffff 2px dotted; }
 .redfont{color:#f26366; font-weight:900;}
 .button {
 line-height: 1;
