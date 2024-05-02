@@ -2,16 +2,299 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Wolf Stove Repair Experts | +1 (213) 401-9019">
+<script>
+    const header = document.querySelector("header");
+    const sectionOne = document.querySelector(".home-intro");
+
+    const faders = document.querySelectorAll(".fade-in");
+    const sliders = document.querySelectorAll(".slide-in");
+
+    const sectionOneOptions = {
+        rootMargin: "-200px 0px 0px 0px"
+    };
+
+    const sectionOneObserver = new IntersectionObserver(function (
+            entries,
+            sectionOneObserver
+        ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    header.classList.add("nav-scrolled");
+                } else {
+                    header.classList.remove("nav-scrolled");
+                }
+            });
+        },
+        sectionOneOptions);
+
+    sectionOneObserver.observe(sectionOne);
+
+    const appearOptions = {
+        threshold: 0,
+        rootMargin: "0px 0px -250px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (
+            entries,
+            appearOnScroll
+        ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add("appear");
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        },
+        appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+
+    sliders.forEach(slider => {
+        appearOnScroll.observe(slider);
+    });
+</script>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Wolf Stove Repair",
+        "image": "img/wolf-stove-repair-services.webp",
+        "@id": "",
+        "url": "",
+        "telephone": "3239907550",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "816 Bartlett St",
+            "addressLocality": "Los Angeles",
+            "postalCode": "90012",
+            "addressCountry": ""
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 34.06259111188187,
+            "longitude": -118.24823518654867
+        },
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 34.06259111188187,
+                "longitude": -118.24823518654867
+            },
+            "geoRadius": 80400
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+        }
+    }
+</script>
+
+<Layout>
+    <div class="tiledBackground4">
+        <div
+                id="top"
+                class="top"
+        >
+            <h2 style="margin: 0">WOLF STOVE REPAIR</h2>
+            <p
+                    style="
+          color: #ffffff;
+          font-weight: 900;
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 2em;
+          text-align: center;
+          text-shadow: #5d0394 2px 0 20px;
+          margin: 0;
+        "
+            >
+                <a class="phone" style="color: #ffffff" href="tel:(323)990-7550"
+                >+1 (323) 990-7550</a
+                >
+            <div
+                    class="link-top"
+                    style="display: flex; justify-content: center; gap: 15px"
+            >
+                <a aria-label="Call Us" href="tel:(323)990-7550" class="button-85"
+                >&nbsp;&nbsp;&nbsp;CALL US&nbsp;&nbsp;</a
+                >
+                <a aria-label="Book Us" href="/book" class="button-85"
+                >&nbsp;&nbsp;BOOK US&nbsp;</a
+                >
+            </div>
+        </div>
+
+        <div id="topblock" style="height: 4em;"></div>
+        <div class="main">
+            <div class="maintext">
+                <div class="main-right">
+                    <div class="main-right__top">
+                        <div class="main-right__top-text">
+                            <h4>Текст заголовок</h4>
+                            <p> Quasi autem perspiciatis dicta fugit, dolorum unde atque necessitatibus!</p>
+                            <h4>Текст заголовок</h4>
+                            <p> Quasi autem perspiciatis dicta fugit, dolorum unde atque necessitatibus!</p>
+                            <h4>Текст заголовок</h4>
+                            <p> Quasi autem perspiciatis dicta fugit, dolorum unde atque necessitatibus!</p>
+                        </div>
+                        <img class="main-img" src="/images/logo.webp" alt="logo"/>
+                    </div>
+                    <h4>Текст заголовок</h4>
+                    <p> Quasi autem perspiciatis dicta fugit, dolorum unde atque necessitatibus!</p>
+                    <h4>Текст заголовок</h4>
+                    <p> Quasi autem perspiciatis dicta fugit, dolorum unde atque necessitatibus!</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <a style="--clr: #7808d0" class="button" href="#price-list">
+          <span class="button__icon-wrapper">
+            <svg
+                    width="10"
+                    class="button__icon-svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 15"
+            >
+              <path
+                      fill="currentColor"
+                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+              ></path>
+            </svg>
+
+            <svg
+                    class="button__icon-svg button__icon-svg--copy"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    fill="none"
+                    viewBox="0 0 14 15"
+            >
+              <path
+                      fill="currentColor"
+                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+              ></path>
+            </svg>
+          </span>
+                Price List
+            </a>
+
+            <a style="--clr: #7808d0" class="button" href="#wolf-stove-repair">
+          <span class="button__icon-wrapper">
+            <svg
+                    width="10"
+                    class="button__icon-svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 15"
+            >
+              <path
+                      fill="currentColor"
+                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+              ></path>
+            </svg>
+
+            <svg
+                    class="button__icon-svg button__icon-svg--copy"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    fill="none"
+                    viewBox="0 0 14 15"
+            >
+              <path
+                      fill="currentColor"
+                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+              ></path>
+            </svg>
+          </span>
+                Repair
+            </a>
+            <a style="--clr: #7808d0" class="button" href="#wolf-stove-instalation">
+          <span class="button__icon-wrapper">
+            <svg
+                    width="10"
+                    class="button__icon-svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 15"
+            >
+              <path
+                      fill="currentColor"
+                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+              ></path>
+            </svg>
+
+            <svg
+                    class="button__icon-svg button__icon-svg--copy"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    fill="none"
+                    viewBox="0 0 14 15"
+            >
+              <path
+                      fill="currentColor"
+                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+              ></path>
+            </svg>
+          </span>
+                Installation
+            </a>
+            <a style="--clr: #7808d0" class="button" href="#wolf-stove-cleaning">
+          <span class="button__icon-wrapper">
+            <svg
+                    width="10"
+                    class="button__icon-svg"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 15"
+            >
+              <path
+                      fill="currentColor"
+                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+              ></path>
+            </svg>
+
+            <svg
+                    class="button__icon-svg button__icon-svg--copy"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    fill="none"
+                    viewBox="0 0 14 15"
+            >
+              <path
+                      fill="currentColor"
+                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+              ></path>
+            </svg>
+          </span>
+                Cleaning
+            </a>
+        </div>
+    </div>
+
     <div class="home-about">
         <div class="columns">
             <div class="col fade-in">
                 <h3
                         style="
-                  color: white !important;
-                  margin: 0 auto;
-                  text-align: center;
-                "
+              color: white !important;
+              margin: 0 auto;
+              text-align: center;
+            "
                 >
                     Wolf Stove
                 </h3>
@@ -24,14 +307,14 @@ import Layout from '../layouts/Layout.astro';
             <div class="col fade-in">
                 <h3
                         style="
-                  color: white !important;
-                  margin: 0 auto;
-                  text-align: center;
-                "
+              color: white !important;
+              margin: 0 auto;
+              text-align: center;
+            "
                 >
                     Wolf Stove
                 </h3>
-                <img src="/images/columns-2.webp" alt="img"/>
+                <img src="./images/columns-2.webp" alt="img"/>
                 <p style="color: white !important; text-align: center">
                     Ремонт WOLF STOVE - <a class="columns-link" href="#">Подробнее</a>
                 </p>
@@ -40,10 +323,10 @@ import Layout from '../layouts/Layout.astro';
             <div class="col fade-in">
                 <h3
                         style="
-                  color: white !important;
-                  margin: 0 auto;
-                  text-align: center;
-                "
+              color: white !important;
+              margin: 0 auto;
+              text-align: center;
+            "
                 >
                     Wolf Stove
                 </h3>
@@ -56,10 +339,10 @@ import Layout from '../layouts/Layout.astro';
             <div class="col fade-in">
                 <h3
                         style="
-                  color: white !important;
-                  margin: 0 auto;
-                  text-align: center;
-                "
+              color: white !important;
+              margin: 0 auto;
+              text-align: center;
+            "
                 >
                     Wolf Stove
                 </h3>
@@ -72,10 +355,10 @@ import Layout from '../layouts/Layout.astro';
             <div class="col fade-in">
                 <h3
                         style="
-                  color: white !important;
-                  margin: 0 auto;
-                  text-align: center;
-                "
+              color: white !important;
+              margin: 0 auto;
+              text-align: center;
+            "
                 >
                     Wolf Stove
                 </h3>
@@ -88,10 +371,10 @@ import Layout from '../layouts/Layout.astro';
             <div class="col fade-in">
                 <h3
                         style="
-                  color: white !important;
-                  margin: 0 auto;
-                  text-align: center;
-                "
+              color: white !important;
+              margin: 0 auto;
+              text-align: center;
+            "
                 >
                     Wolf Stove
                 </h3>
@@ -104,10 +387,10 @@ import Layout from '../layouts/Layout.astro';
             <div class="col fade-in">
                 <h3
                         style="
-                  color: white !important;
-                  margin: 0 auto;
-                  text-align: center;
-                "
+              color: white !important;
+              margin: 0 auto;
+              text-align: center;
+            "
                 >
                     Wolf Stove
                 </h3>
@@ -120,10 +403,10 @@ import Layout from '../layouts/Layout.astro';
             <div class="col fade-in">
                 <h3
                         style="
-                  color: white !important;
-                  margin: 0 auto;
-                  text-align: center;
-                "
+              color: white !important;
+              margin: 0 auto;
+              text-align: center;
+            "
                 >
                     Wolf Stove
                 </h3>
@@ -135,58 +418,15 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </div>
     </div>
-    
+
     <div class="tiledBackground5">
         <div id="price-list"></div>
         <div class="maintext problems">
             <div class="problems-item">
-
-                <!---prices -->
-                <h2>WOLF Stove Repair Most Common Issies&nbsp;&nbsp;&nbsp;<a aria-label="Learn more about Wolf Stove repair" href="#topblock"><img
-                    loading="lazy" alt="Go to main menu" src="images/back_to_top.png" width="80" height="79"></a></h2>
-                    <p>Our expert technicians are trained in Wolf appliance repair, and are equipped to handle any issues that may arise with your Wolf stove, range, or oven.</p>
-            <br>
-            <table style="color:#ffffff; font-size:1.5em; width:90%; margin:0 auto 0 auto;">
-                <tbody>
-                    <tr><td class="tdservice">Wolf oven does not heat up</td></tr>
-                    <tr><td class="tdred">Wolf oven ignition problem</td></tr>
-                    <tr><td class="tdservice">Uneven cooking in the Wolf oven</td></tr>
-                    <tr><td class="tdred">Pilot light does not light up in Wolf oven</td></tr>
-                    <tr><td class="tdservice">Wolf oven temperature calibration</td></tr>
-                    <tr><td class="tdred">Eliminating gas odor from the oven Wolf</td></tr>
-                    <tr><td class="tdservice">Wolf oven burner not working</td></tr>
-                    <tr><td class="tdred">Built-in oven display problems Wolf</td></tr>
-                    <tr><td class="tdservice">Resetting Wolf wall oven error codes</td></tr>
-                    <tr><td class="tdred">Solving Wolf Oven Door Not Closing Properly</td></tr>
-                    <tr><td class="tdservice">Solving a problem with excessive smoke in a Wolf oven</td></tr>
-                    <tr><td class="tdred">Wolf oven fan makes strange noises</td></tr>
-                    <tr><td class="tdservice">Troubleshooting error messages on Wolf ovens</td></tr>
-                    <tr><td class="tdred">Problems with Wolf oven self-cleaning function</td></tr>
-                    <tr><td class="tdservice">Timer and clock problems on Wolf ovens</td></tr>
-                    <tr><td class="tdred">Wolf gas oven does not light after cleaning</td></tr>
-                    <tr><td class="tdservice">Check and replace faulty Wolf oven sensor</td></tr>
-                    <tr><td class="tdred">Troubleshooting gas flow problems with Wolf ovens</td></tr>
-                    <tr><td class="tdservice">Wolf oven won't turn off - what should I do?</td></tr>
-                    <tr><td class="tdred">Troubleshooting a Wolf steam oven that won't produce steam</td></tr>
-                    <tr><td class="tdservice">Wolf stove burner won't light</td></tr>
-                    <tr><td class="tdred">Troubleshooting an uneven flame in a Wolf gas stove</td></tr>
-                    <tr><td class="tdservice">Troubleshooting heating problems with a Wolf electric stove</td></tr>
-                    <tr><td class="tdred">Common problems with Wolf induction stoves
-                    Light problems with Wolf propane stoves</td></tr>
-                    <tr><td class="tdservice">Temperature control problems with Wolf stoves</td></tr>
-                    <tr><td class="tdred">Resetting error codes on Wolf dual-fuel stoves</td></tr>
-                    <tr><td class="tdservice">Eliminating gas odor from a Wolf stove</td></tr>
-                    <tr><td class="tdred">Diagnosing electrical problems on Wolf stoves</td></tr>
-                    <tr><td class="tdservice">Wolf stove does not turn on</td></tr>
-                    <tr><td class="tdred">Removing rust or corrosion on the surfaces of a Wolf stove</td></tr>
-                    <tr><td class="tdservice">Cleaning and troubleshooting a Wolf grill</td></tr>
-                    <tr><td class="tdred">Troubleshooting Wolf cooker hood ventilation problems</td></tr>
-                    <tr><td class="tdservice">Problems with excessive smoke from a Wolf stove</td></tr>
-                    <tr><td class="tdred">Wolf Dual Fuel Range Troubleshooting</td></tr>
-                    <tr><td class="tdservice">Checking and replacing a faulty Wolf stove sensor</td></tr>
-                    <tr><td class="tdred">Troubleshooting problems with the touch panel on Wolf stoves</td></tr>
-                </tbody>
-            </table>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ex.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ex.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ex.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ex.</p>
             </div>
             <div class="problems-item">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ex.</p>
@@ -270,4 +510,42 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </div>
     </div>
+
+    <div class="tiledBackground6">
+        <div id="wolf-stove-repair"></div>
+        <div class="maintext" style="margin: 0 auto">
+            <h2 style="text-align: center;">Areas we service:</h2>
+            <p style="line-height: 150%;">Los Angeles | Beverly Hills | Orange County | Malibu | Bel Air | Calabasas |
+                Encino | Tarzana | Sherman Oaks | Westwood | Santa Monica | Pacific Palisades | Brentwood | Wilshire |
+                Topanga | Ventura County | Santa Barbara | Montecito | Oxnard | Carpinteria | Camarillo | Newbury Park |
+                Thousand Oaks | Westlake Village | Agoura Hills | Simi Valley | Hidden Hills | Woodland Hills | West
+                Hills |
+                Canoga Park | Chatsworth | Porter Ranch | Granada Hills | Valencia | Santa Clarita | Valley Village |
+                Northridge | North Hollywood | Toluca Lake | Hollywood | Burbank | Glendale | Silver Lake | DTLA |
+                Atwater
+                Village | Pasadena | Altadena | La Crescenta | Montrose | Rolling Hills | Rancho Palos Verdes | Redondo
+                Beach | Venice Beach | Hermosa Beach | Manhattan Beach | El Segundo | Torrance | Marina Del Rey | Culver
+                City | Century City | West Hollywood | Newport Beach | Laguna Niguel | Dana Point | Coto De Caza</p>
+        </div>
+        <div
+                class="link-top"
+                style="display: flex; justify-content: center; gap: 15px; margin-top: 20px"
+        >
+            <a aria-label="Call Us" href="tel:(323)990-7550" class="button-85"
+            >&nbsp;&nbsp;&nbsp;CALL US&nbsp;&nbsp;</a
+            >
+            <a aria-label="Book Us" href="/book" class="button-85"
+            >&nbsp;&nbsp;BOOK US&nbsp;</a
+            >
+        </div>
+    </div>
+
+    <!--has to be somewhere on the page otherwise animation does not work-->
+    <section class="home-intro">
+        <h2>Intersection Observer is pretty useful</h2>
+    </section>
 </Layout>
+
+<style>
+
+</style>

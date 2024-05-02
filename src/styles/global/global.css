@@ -31,7 +31,7 @@ body{background-color:#000000;
  src: local(''),
       url('fonts/anton/Anton-Regular.ttf') format('ttf'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
-.lg {background-image: url(../images/lg.webp);background-size:100%; 
+.lg {background-image: url(/images/lg.webp);background-size:100%; 
   background-clip: text;-webkit-background-clip:text; color:transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
@@ -110,7 +110,7 @@ text-align: center;
   color:#ffffff; font-size: 20px; font-weight:900; margin:0 0 0 30px;
 }
 .tiledBackground {
-background-image: url(../images/wolf-stove-repair-services.webp);
+background-image: url(/images/wolf-stove-repair-services.webp);
 background-repeat: no-repeat;
 background-size: 100%;
 max-width: 100%;
@@ -307,7 +307,7 @@ h1 {
   font-weight: 900;
   -webkit-text-stroke-width: 0.6px;
   -webkit-text-stroke-color: #fff;
-  background-image: url(img/lg.webp);
+  background-image: url(/images/lg.webp);
   background-size: 20%;
 }
 
@@ -438,7 +438,7 @@ img.responsiveimg-300 {
 
 .tiledBackground4 {
   position: relative;
-  background-image: url(./img/main-background.webp);
+  background-image: url(/images/main-background.webp);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100%;
@@ -452,7 +452,7 @@ img.responsiveimg-300 {
 }
 
 .tiledBackground5 {
-  background: url("./img/bg11.webp");
+  background: url("/images/bg11.webp");
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100%;
@@ -466,7 +466,7 @@ img.responsiveimg-300 {
 }
 
 .tiledBackground1 {
-  background-image: url(img/bg.jpg);
+  background-image: url(/images/bg.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   max-width: 100%;
