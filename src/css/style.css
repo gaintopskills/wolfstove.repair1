@@ -794,3 +794,38 @@ body {
         padding: 10px 15px;
     }
 }
+
+
+.cookie {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    background: white;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cookie p {
+    color: black;
+    margin: 0;
+}
+
+.cookie a {
+    color: black;
+    text-decoration: underline;
+}
+
+.cookie-button {
+    background: white;
+    color: black;
+    height: 45px;
+    width: 120px;
+    border-radius: 25px;
+    cursor: pointer;
+}

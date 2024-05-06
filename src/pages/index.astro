@@ -467,7 +467,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="more-stuff-grid more-item">
             <div class="more-stuff-grid-wrapper">
                 <img src="/images/columns-1.webp" alt="img" class="slide-in from-left"/>
-                <div class="more-stuff-grid-text slide-in right">
+                <div class="more-stuff-grid-text slide-in from-right">
                     <h3>Текст текст</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
@@ -544,6 +544,13 @@ import Layout from '../layouts/Layout.astro';
     <section class="home-intro">
         <h2>Intersection Observer is pretty useful</h2>
     </section>
+        <div class="cookie" id="cookieDiv">
+        <p>This site uses <a href="">cookies.</a>
+        </p>
+        <button class="cookie-button" type="button" id="cookieButton">
+            Accept cookies
+        </button>
+    </div>
 </Layout>
 
 <style>
