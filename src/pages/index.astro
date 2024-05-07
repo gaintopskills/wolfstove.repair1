@@ -56,6 +56,54 @@ import Layout from '../layouts/Layout.astro';
     sliders.forEach(slider => {
         appearOnScroll.observe(slider);
     });
+
+   function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+
+function showCookieButton() {
+    let cookieButton = document.getElementById('cookieButton');
+    let cookieDiv = document.getElementById('cookieDiv');
+    if (!getCookie('myCookie')) {
+        cookieButton.style.display = 'block';
+        cookieDiv.style.display = 'flex';
+    } else {
+        cookieButton.style.display = 'none';
+        cookieDiv.style.display = 'none';
+    }
+}
+
+
+let cookieButton = document.getElementById('cookieButton');
+cookieButton.addEventListener('click', function () {
+    setCookie('myCookie', 'cookieValue', 365);
+    showCookieButton();
+});
+
+// Проверка на наличие куки при загрузке страницы
+window.onload = function () {
+    if (getCookie('myCookie')) {
+        showCookieButton();
+    }
+};
 </script>
 
 <script type="application/ld+json">
@@ -152,7 +200,7 @@ import Layout from '../layouts/Layout.astro';
                             <h4>Текст заголовок</h4>
                             <p> Quasi autem perspiciatis dicta fugit, dolorum unde atque necessitatibus!</p>
                         </div>
-                        <img class="main-img" src="/images/logo.webp" alt="logo"/>
+                        <img class="main-img" src=/images/logo.webp" alt="logo"/>
                     </div>
                     <h4>Текст заголовок</h4>
                     <p> Quasi autem perspiciatis dicta fugit, dolorum unde atque necessitatibus!</p>
